@@ -111,6 +111,8 @@ spec:
             httpGet:
               path: /
               port: http
+      imagePullSecrets: 
+        - name: {{ .Values.app.secretName }}
 {{- if .Values.app.srcFrom }}
           volumeMounts:
             - name: src
