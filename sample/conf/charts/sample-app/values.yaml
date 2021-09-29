@@ -2,10 +2,11 @@
 # general app values
 team: Rancher
 app:
-  image: sample-app:local
+  image: ghcr.io/piky/sample-app:latest
   env:
     AUDIENCE: Rancher-Meetup
   args: '["serve-develop"]'
   domain: sample.k3d.localhost
   port: 5000
-  srcFrom: /src
+  srcFrom: ""
+  secretName: regcred
